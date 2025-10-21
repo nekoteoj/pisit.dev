@@ -8,7 +8,7 @@
 
             <!-- Hamburger menu button (mobile) -->
             <div class="md:hidden flex" @onclick="ToggleNavMenu">
-                <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                <button id="menu-toggle" class="p-2 text-accent-5 focus:outline-none rounded-full hover:bg-gray-200 cursor-pointer">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -26,9 +26,9 @@
 
     <!-- Mobile Menu -->
     <div class="absolute md:hidden @NavMenuCssClass overflow-hidden bg-white shadow-xs w-full transition-all duration-250 ease-in-out">
-        <div class="px-4 py-4 space-y-2 border-b border-gray-200">
-            <NavLink class="flex py-2 justify-center text-gray-800 rounded-full hover:bg-gray-200" href="" Match="NavLinkMatch.All" ActiveClass="bg-accent-1"  @onclick="CloseNavMenu">Home</NavLink>
-            <NavLink class="flex py-2 justify-center text-gray-800 rounded-full hover:bg-gray-200" href="/counter" Match="NavLinkMatch.All" ActiveClass="bg-accent-1" @onclick="CloseNavMenu">Counter</NavLink>
+        <div class="px-4 py-4 space-y-2 border-b border-gray-200 text-gray-800">
+            <NavLink class="flex py-2 justify-center rounded-full hover:bg-gray-200" href="" Match="NavLinkMatch.All" ActiveClass="bg-accent-1 text-accent-5"  @onclick="CloseNavMenu">Home</NavLink>
+            <NavLink class="flex py-2 justify-center rounded-full hover:bg-gray-200" href="/counter" Match="NavLinkMatch.All" ActiveClass="bg-accent-1 text-accent-5" @onclick="CloseNavMenu">Counter</NavLink>
         </div>
     </div>
 </nav>
