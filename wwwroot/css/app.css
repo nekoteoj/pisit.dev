@@ -99,7 +99,7 @@ h1:focus {
     content: '';
     position: absolute;
     inset: 0;
-    background: #C02D76;
+    background: oklch(71.2% 0.194 13.428);
     scale: var(--blazor-load-percentage, 0%) 100%;
     transform-origin: left top;
     transition: scale ease-out 0.5s;
