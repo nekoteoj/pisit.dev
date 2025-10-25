@@ -1,33 +1,50 @@
 ﻿@page "/"
+@using PisitDev.Components.Logo
 
 <PageTitle>Home - Pisit</PageTitle>
 
-<div class="flex flex-col md:flex-row justify-center space-y-4 space-x-4">
+<div class="flex flex-col md:flex-row justify-center items-center md:items-start space-y-4 md:space-x-4 md:space-y-0">
     <section
-        class="flex flex-col max-w-sm gap-x-4 rounded-xl bg-white p-6 shadow-md outline-1 outline-black/10 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
-        <img src="img/profile.png" alt="My profile picture" class="rounded-full w-3xs self-center">
+        class="flex flex-col h-fit w-full md:max-w-xs gap-x-4 rounded-xl bg-white p-6 shadow-md outline-1 outline-black/10 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
+        <img src="img/profile.png" alt="My profile picture" class="rounded-full w-32 md:w-48 self-center">
         <div class="mt-4">
             <h2 class="text-2xl font-bold">Pisit Wajanasara</h2>
             <p class="text-gray-600">CSE PhD Candidate @@ UCSD</p>
         </div>
-        <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-github">
-                <title>GitHub</title>
-                <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                </path>
-            </svg>
+        <div class="mt-4">
+            <button type="button"
+                class=" flex items-center justify-center rounded p-1 border border-gray-200 hover:bg-accent-1 hover:text-accent-5 hover:border-accent-5 hover:cursor-pointer">
+                <a href="https://github.com/nekoteoj" target="_blank" class="inline-flex flex-row space-x-1">
+                    <GitHub />
+                    <div>GitHub</div>
+                </a>
+            </button>
         </div>
     </section>
     <section
-        class="flex flex-col max-w-sm md:max-w-lg items-center gap-x-4 rounded-xl bg-white p-6">
-        <h2 class="text-2xl font-bold">Hi! I'm Pisit.</h2>
-        <p>I'm Pisit (Joe) Wajanasara. I'm currently a Ph.D. student in Computer Science at UCSD.
-            My primary research area includes Bioinformatics, Proteomics, and Mass Spectrometry data analysis.
-            I'm also interested in Machine Learning, NLP, and Software Development.
-            In my free time, I like to explore new tech stuffs, and to play a guitar.
-            I'm also a mechanical keyboard enthusiast.</p>
+        class="flex flex-col w-full h-fit md:max-w-xl gap-x-4 rounded-xl bg-white p-6 shadow-md outline-1 outline-black/10 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
+        <h3 class="font-bold">About Me</h3>
+        <hr class="my-4 border-gray-200 w-full">
+
+        <div class="space-y-4">
+            <p>Hi! I’m Pisit (Joe) Wajanasara, a Ph.D. candidate in Computer Science at the University of California,
+                San
+                Diego (UCSD), advised by Prof. Nuno Bandeira.
+                My research interests lie in Bioinformatics, Proteomics, Machine Learning, Natural Language Processing,
+                and
+                Software Development. Currently, my work focuses on developing and analyzing algorithms for Protein Mass
+                Spectrometry and Post-Translational Modifications.</p>
+            <p>Before starting my Ph.D., I earned my B.E. in Computer Engineering from Chulalongkorn University in
+                Thailand,
+                where I worked with Prof. Duangdao Wichadakul on drug–protein binding affinity prediction. After
+                graduation,
+                I
+                also joined the MyCourseVille team as a part-time software engineer, helping develop a web platform for
+                the
+                university’s Student Wellness Department for one year.</p>
+            <p>Outside of research, I enjoy playing the guitar in my free time.
+                Feel free to check out my <a href="https://www.youtube.com/@@pisitw" target="_blank"
+                    class="font-medium text-accent-5 hover:underline">YouTube channel</a></p>
+        </div>
     </section>
 </div>
