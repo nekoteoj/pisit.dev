@@ -41,10 +41,12 @@
         </div>
     </div>
 
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="." class="reload">Reload</a>
-        <span class="dismiss">🗙</span>
+    <div id="blazor-error-ui" class="flex space-y-2 pb-4">
+        <div>An unhandled error has occurred.</div>
+        <div class="flex gap-x-2">
+            <a href="." class="reload bg-accent-3 rounded-full border-2 p-2 hover:border-accent-5">Reload</a>
+            <span class="dismiss rounded-full border-2 p-2 hover:border-accent-5 cursor-pointer">Dismiss</span>
+        </div>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
 </body>

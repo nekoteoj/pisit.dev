@@ -2,6 +2,7 @@
 
 @theme {
     --color-accent-1: var(--color-rose-100);
+    --color-accent-3: var(--color-rose-300);
     --color-accent-5: var(--color-rose-500);
     --color-champaign-white: #FBFAF3;
 }
