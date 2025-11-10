@@ -13,6 +13,6 @@
   },
   "scripts": {
     "watch": "npx @tailwindcss/cli -i ./Styles/tailwind.css -o ./wwwroot/css/tailwind.css --watch",
-    "build": "npx @tailwindcss/cli -i ./Styles/tailwind.css -o ./wwwroot/css/tailwind.css"
+    "build": "npx @tailwindcss/cli -i ./Styles/tailwind.css -o ./wwwroot/css/tailwind.css --minify"
   }
 }
