@@ -1,55 +1,45 @@
-﻿@page "/"
+@page "/"
 @using PisitDev.Components.Logo
 
 <PageTitle>Home - Pisit</PageTitle>
 
 <div class="flex flex-col md:flex-row justify-center items-center md:items-start space-y-4 md:space-x-4 md:space-y-0">
     <section
-        class="flex flex-col h-fit w-full md:max-w-xs gap-x-4 rounded-xl bg-white p-6 shadow-md outline-1 outline-black/10 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
+        class="flex flex-col h-fit w-full md:max-w-xs gap-x-4 rounded-xl bg-white dark:bg-slate-900 p-6 shadow-sm border border-gray-100 dark:border-slate-800 transition-colors duration-300">
         <img src="img/profile.webp" alt="My profile picture" class="rounded-full w-32 md:w-48 self-center">
         <div class="mt-4">
-            <h2 class="text-2xl font-bold">Pisit Wajanasara</h2>
-            <p class="text-gray-600">CSE PhD Candidate @@ UCSD</p>
+            <h2 class="text-2xl font-bold text-slate-800 dark:text-slate-100">Pisit Wajanasara</h2>
+            <p class="text-slate-500 dark:text-slate-400 text-sm">CSE PhD Candidate @@ UCSD</p>
         </div>
-        <div class="flex flex-wrap mt-4 gap-2">
-            <div
-                class=" flex items-center justify-center rounded p-1 border border-gray-200 hover:bg-accent-1 hover:text-accent-5 hover:border-accent-5 hover:cursor-pointer">
-                <a href="https://github.com/nekoteoj" target="_blank" class="inline-flex flex-row space-x-1">
-                    <GitHub />
-                    <div>GitHub</div>
-                </a>
-            </div>
-            <div
-                class=" flex items-center justify-center rounded p-1 border border-gray-200 hover:bg-accent-1 hover:text-accent-5 hover:border-accent-5 hover:cursor-pointer">
-                <a href="https://www.linkedin.com/in/pisit-wajanasara/" target="_blank"
-                    class="inline-flex flex-row space-x-1">
-                    <LinkedIn />
-                    <div>LinkedIn</div>
-                </a>
-            </div>
-            <div
-                class=" flex items-center justify-center rounded p-1 border border-gray-200 hover:bg-accent-1 hover:text-accent-5 hover:border-accent-5 hover:cursor-pointer">
-                <a href="https://x.com/nekoteoj" target="_blank" class="inline-flex flex-row space-x-1">
-                    <Twitter />
-                    <div>X (Twitter)</div>
-                </a>
-            </div>
-            <div
-                class=" flex items-center justify-center rounded p-1 border border-gray-200 hover:bg-accent-1 hover:text-accent-5 hover:border-accent-5 hover:cursor-pointer">
-                <a href="https://scholar.google.com/citations?user=Tg1QTGcAAAAJ&hl=en" target="_blank"
-                    class="inline-flex flex-row space-x-1">
-                    <GoogleScholar />
-                    <div>Google Scholar</div>
-                </a>
-            </div>
+        <div class="grid grid-cols-2 gap-2 w-full mt-4">
+            <a href="https://github.com/nekoteoj" target="_blank" 
+                class="flex items-center justify-center gap-x-2 rounded-lg py-2 px-3 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-accent-1 hover:text-accent-5 hover:border-accent-5 dark:hover:bg-accent-5/20 dark:hover:text-accent-3 dark:hover:border-accent-3/60 transition-all duration-150 hover:scale-[1.02] cursor-pointer text-xs font-medium">
+                <GitHub />
+                <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/pisit-wajanasara/" target="_blank"
+                class="flex items-center justify-center gap-x-2 rounded-lg py-2 px-3 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-accent-1 hover:text-accent-5 hover:border-accent-5 dark:hover:bg-accent-5/20 dark:hover:text-accent-3 dark:hover:border-accent-3/60 transition-all duration-150 hover:scale-[1.02] cursor-pointer text-xs font-medium">
+                <LinkedIn />
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://x.com/nekoteoj" target="_blank"
+                class="flex items-center justify-center gap-x-2 rounded-lg py-2 px-3 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-accent-1 hover:text-accent-5 hover:border-accent-5 dark:hover:bg-accent-5/20 dark:hover:text-accent-3 dark:hover:border-accent-3/60 transition-all duration-150 hover:scale-[1.02] cursor-pointer text-xs font-medium">
+                <Twitter />
+                <span>X (Twitter)</span>
+            </a>
+            <a href="https://scholar.google.com/citations?user=Tg1QTGcAAAAJ&hl=en" target="_blank"
+                class="flex items-center justify-center gap-x-2 rounded-lg py-2 px-3 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-accent-1 hover:text-accent-5 hover:border-accent-5 dark:hover:bg-accent-5/20 dark:hover:text-accent-3 dark:hover:border-accent-3/60 transition-all duration-150 hover:scale-[1.02] cursor-pointer text-xs font-medium">
+                <GoogleScholar />
+                <span>Scholar</span>
+            </a>
         </div>
     </section>
     <section
-        class="flex flex-col w-full h-fit md:max-w-xl gap-x-4 rounded-xl bg-white p-6 shadow-md outline-1 outline-black/10 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
-        <h3 class="font-bold">About Me</h3>
-        <hr class="my-4 border-gray-200 w-full">
+        class="flex flex-col w-full h-fit md:max-w-xl gap-x-4 rounded-xl bg-white dark:bg-slate-900 p-6 shadow-sm border border-gray-100 dark:border-slate-800 transition-colors duration-300">
+        <h3 class="font-bold text-lg text-slate-800 dark:text-slate-100">About Me</h3>
+        <hr class="my-4 border-slate-200 dark:border-slate-800 w-full">
 
-        <div class="space-y-4">
+        <div class="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
             <p>Hi! I’m Pisit (Joe) Wajanasara, a Ph.D. candidate in Computer Science at the University of California,
                 San
                 Diego (UCSD), advised by Prof. Nuno Bandeira.
@@ -67,7 +57,7 @@
                 university’s Student Wellness Department for one year.</p>
             <p>Outside of research, I enjoy playing the guitar in my free time.
                 Feel free to check out my <a href="https://www.youtube.com/@@pisitw" target="_blank"
-                    class="font-medium text-accent-5 hover:underline">YouTube channel</a></p>
+                    class="font-medium text-accent-5 dark:text-accent-3 hover:underline">YouTube channel</a></p>
         </div>
     </section>
 </div>

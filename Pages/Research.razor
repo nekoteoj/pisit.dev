@@ -6,24 +6,24 @@
 
 <div class="flex flex-col justify-center items-center gap-y-4">
     <section
-        class="flex flex-col w-full h-fit md:max-w-4xl gap-x-4 rounded-xl bg-white p-6 shadow-md outline-1 outline-black/10 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
-        <h1 class="font-bold text-xl">Publication</h1>
-        <hr class="my-4 border-gray-200 w-full">
+        class="flex flex-col w-full h-fit md:max-w-4xl gap-x-4 rounded-xl bg-white dark:bg-slate-900 p-6 shadow-sm border border-gray-100 dark:border-slate-800 transition-colors duration-300">
+        <h1 class="font-bold text-2xl text-slate-800 dark:text-slate-100">Publication</h1>
+        <hr class="my-4 border-slate-200 dark:border-slate-800 w-full">
         <ul class="list-disc space-y-4">
             @foreach (var pub in PublicationService.GetPublications().Where(p => !p.IsConference))
             {
-                <li class="ml-4">
-                    <p class="font-bold">@pub.Title</p>
-                    <p>@((MarkupString)HighlightAuthor(pub.FormattedAuthors, "Pisit Wajanasara"))</p>
-                    <p>
+                <li class="ml-4 text-slate-600 dark:text-slate-300">
+                    <p class="font-bold text-slate-800 dark:text-slate-100">@pub.Title</p>
+                    <p class="text-slate-600 dark:text-slate-300 mt-1">@((MarkupString)HighlightAuthor(pub.FormattedAuthors, "Pisit Wajanasara"))</p>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">
                         [@pub.Year] @pub.Venue
                         @if (!string.IsNullOrEmpty(pub.PaperUrl))
                         {
-                            <a href="@pub.PaperUrl" target="_blank" class="text-accent-5 ml-1 hover:underline">&lt;paper&gt;</a>
+                            <a href="@pub.PaperUrl" target="_blank" class="text-accent-5 dark:text-accent-3 ml-2 hover:underline font-medium">&lt;paper&gt;</a>
                         }
                         @if (!string.IsNullOrEmpty(pub.CodeUrl))
                         {
-                            <a href="@pub.CodeUrl" target="_blank" class="text-accent-5 ml-1 hover:underline">&lt;code&gt;</a>
+                            <a href="@pub.CodeUrl" target="_blank" class="text-accent-5 dark:text-accent-3 ml-2 hover:underline font-medium">&lt;code&gt;</a>
                         }
                     </p>
                 </li>
@@ -32,16 +32,16 @@
     </section>
 
     <section
-        class="flex flex-col w-full h-fit md:max-w-4xl gap-x-4 rounded-xl bg-white p-6 shadow-md outline-1 outline-black/10 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
-        <h1 class="font-bold text-xl">Conference</h1>
-        <hr class="my-4 border-gray-200 w-full">
+        class="flex flex-col w-full h-fit md:max-w-4xl gap-x-4 rounded-xl bg-white dark:bg-slate-900 p-6 shadow-sm border border-gray-100 dark:border-slate-800 transition-colors duration-300">
+        <h1 class="font-bold text-2xl text-slate-800 dark:text-slate-100">Conference</h1>
+        <hr class="my-4 border-slate-200 dark:border-slate-800 w-full">
         <ul class="list-disc space-y-4">
             @foreach (var pub in PublicationService.GetPublications().Where(p => p.IsConference))
             {
-                <li class="ml-4">
-                    <p class="font-bold">@pub.Title</p>
-                    <p>@((MarkupString)HighlightAuthor(pub.FormattedAuthors, "Pisit Wajanasara"))</p>
-                    <p>[@pub.Year] @pub.Venue</p>
+                <li class="ml-4 text-slate-600 dark:text-slate-300">
+                    <p class="font-bold text-slate-800 dark:text-slate-100">@pub.Title</p>
+                    <p class="text-slate-600 dark:text-slate-300 mt-1">@((MarkupString)HighlightAuthor(pub.FormattedAuthors, "Pisit Wajanasara"))</p>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">[@pub.Year] @pub.Venue</p>
                 </li>
             }
         </ul>
