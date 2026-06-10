@@ -8,8 +8,8 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.14",
-    "tailwindcss": "^4.1.14"
+    "@tailwindcss/cli": "^4.3.0",
+    "tailwindcss": "^4.3.0"
   },
   "scripts": {
     "watch": "npx @tailwindcss/cli -i ./Styles/tailwind.css -o ./wwwroot/css/tailwind.css --watch",
