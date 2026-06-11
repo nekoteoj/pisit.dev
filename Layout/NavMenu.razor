@@ -9,8 +9,11 @@
                 </NavLink>
             </div>
 
-            <!-- Hamburger menu button (mobile) -->
-            <div class="md:hidden flex">
+            <!-- Hamburger menu button & Theme toggle (mobile) -->
+            <div class="md:hidden flex items-center space-x-2">
+                <!-- Theme Toggle Button (Mobile) -->
+                <ThemeToggle />
+
                 <button id="menu-toggle" @onclick="ToggleNavMenu"
                     aria-expanded="@((!collapseNavMenu).ToString().ToLower())"
                     aria-label="Toggle navigation menu"
@@ -33,6 +36,9 @@
                 <NavLink
                     class="inline-flex items-center rounded-full hover:bg-gray-200 dark:hover:bg-slate-800 transition duration-150 py-2 px-4"
                     href="/blog" Match="NavLinkMatch.All" ActiveClass="bg-accent-1 text-accent-5 dark:bg-accent-5/20 dark:text-accent-3">Blog</NavLink>
+
+                <!-- Theme Toggle Button (Desktop) -->
+                <ThemeToggle Class="ml-2" />
             </div>
         </div>
     </div>

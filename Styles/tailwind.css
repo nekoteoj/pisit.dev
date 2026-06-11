@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
     --color-accent-1: var(--color-rose-100);
     --color-accent-3: var(--color-rose-300);
