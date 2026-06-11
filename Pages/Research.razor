@@ -14,7 +14,24 @@
             {
                 <li class="ml-4 text-slate-600 dark:text-slate-300">
                     <p class="font-bold text-slate-800 dark:text-slate-100">@pub.Title</p>
-                    <p class="text-slate-600 dark:text-slate-300 mt-1">@((MarkupString)HighlightAuthor(pub.FormattedAuthors, "Pisit Wajanasara"))</p>
+                    <p class="text-slate-600 dark:text-slate-300 mt-1">
+                        @for (int i = 0; i < pub.Authors.Length; i++)
+                        {
+                            var author = pub.Authors[i];
+                            if (author == "Pisit Wajanasara")
+                            {
+                                <span class="underline">@author</span>
+                            }
+                            else
+                            {
+                                <span>@author</span>
+                            }
+                            @if (i < pub.Authors.Length - 1)
+                            {
+                                <span>, </span>
+                            }
+                        }
+                    </p>
                     <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">
                         [@pub.Year] @pub.Venue
                         @if (!string.IsNullOrEmpty(pub.PaperUrl))
@@ -40,7 +57,24 @@
             {
                 <li class="ml-4 text-slate-600 dark:text-slate-300">
                     <p class="font-bold text-slate-800 dark:text-slate-100">@pub.Title</p>
-                    <p class="text-slate-600 dark:text-slate-300 mt-1">@((MarkupString)HighlightAuthor(pub.FormattedAuthors, "Pisit Wajanasara"))</p>
+                    <p class="text-slate-600 dark:text-slate-300 mt-1">
+                        @for (int i = 0; i < pub.Authors.Length; i++)
+                        {
+                            var author = pub.Authors[i];
+                            if (author == "Pisit Wajanasara")
+                            {
+                                <span class="underline">@author</span>
+                            }
+                            else
+                            {
+                                <span>@author</span>
+                            }
+                            @if (i < pub.Authors.Length - 1)
+                            {
+                                <span>, </span>
+                            }
+                        }
+                    </p>
                     <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">[@pub.Year] @pub.Venue</p>
                 </li>
             }
@@ -49,8 +83,4 @@
 </div>
 
 @code {
-    private string HighlightAuthor(string authors, string nameToHighlight)
-    {
-        return authors.Replace(nameToHighlight, $"<span class=\"underline\">{nameToHighlight}</span>");
-    }
 }

@@ -7,10 +7,4 @@ public record Publication(
     string Venue,
     string? PaperUrl = null,
     string? CodeUrl = null,
-    bool IsConference = false)
-{
-    public string FormattedAuthors
-    {
-        get => field ??= string.Join(", ", Authors);
-    }
-}
+    bool IsConference = false);
