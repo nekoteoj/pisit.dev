@@ -10,8 +10,10 @@
             </div>
 
             <!-- Hamburger menu button (mobile) -->
-            <div class="md:hidden flex" @onclick="ToggleNavMenu">
-                <button id="menu-toggle"
+            <div class="md:hidden flex">
+                <button id="menu-toggle" @onclick="ToggleNavMenu"
+                    aria-expanded="@((!collapseNavMenu).ToString().ToLower())"
+                    aria-label="Toggle navigation menu"
                     class="p-2 text-accent-5 focus:outline-none rounded-full hover:bg-gray-200 dark:hover:bg-slate-800 cursor-pointer">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +57,7 @@
 @code {
     private bool collapseNavMenu = true;
 
-    private string? NavMenuCssClass => collapseNavMenu ? "max-h-0" : "max-h-screen";
+    private string? NavMenuCssClass => collapseNavMenu ? "max-h-0" : "max-h-64";
 
     private void ToggleNavMenu()
     {
