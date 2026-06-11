@@ -1,12 +1,12 @@
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #FBFAF3;
+    color: #333333;
 }
 
-@media (prefers-color-scheme: dark) {
-    html, body {
-        background-color: #000000;
-    }
+.dark, .dark body {
+    background-color: #000000;
+    color: #f1f5f9;
 }
 
 h1:focus {
@@ -58,6 +58,13 @@ h1:focus {
     justify-content: center;
     color: #333;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark .loading-logo {
+    background-color: #334155; /* slate-700 */
+    color: #f1f5f9; /* slate-100 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .loading-progress {
@@ -67,6 +74,11 @@ h1:focus {
     border-radius: 0.25rem;
     overflow: hidden;
     position: relative;
+    transition: background-color 0.3s;
+}
+
+.dark .loading-progress {
+    background: #1e293b; /* slate-800 */
 }
 
 .loading-progress:after {
